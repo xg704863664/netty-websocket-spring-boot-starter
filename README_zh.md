@@ -23,7 +23,7 @@ public class  subprotocolsWebSocket{
 
 ```xml
 	<dependency>
-		<groupId>org.monkey</groupId>
+		<groupId>com.github.monkey</groupId>
 		<artifactId>netty-websocket-spring-boot-starter</artifactId>
 		<version>0.0.1</version>
 	</dependency>
