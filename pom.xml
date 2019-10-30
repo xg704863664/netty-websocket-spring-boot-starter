@@ -19,7 +19,19 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+    <scm>
+        <connection>scm:git:git@github.com:xg704863664/netty-websocket-spring-boot-starter.git</connection>
+        <developerConnection>scm:git:ssh://github.com/xg704863664/netty-websocket-spring-boot-starter.git</developerConnection>
+        <url>https://github.com/xg704863664/netty-websocket-spring-boot-starter</url>
+    </scm>
 
+    <developers>
+        <developer>
+            <name>xiagen</name>
+            <email>704863664@qq.com</email>
+            <url>https://github.com/xg704863664</url>
+        </developer>
+    </developers>
 
     <properties>
         <netty.version>4.1.25.Final</netty.version>
@@ -48,8 +60,9 @@
 
     <profiles>
         <profile>
-            <id>release</id>
+            <id>ossrh</id>
             <build>
+                <pluginManagement>
                 <plugins>
                     <!-- Sources Plugin -->
                     <plugin>
@@ -112,16 +125,17 @@
                         </configuration>
                     </plugin>
                 </plugins>
+                </pluginManagement>
             </build>
 
             <distributionManagement>
                 <snapshotRepository>
                     <id>ossrh</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                 </snapshotRepository>
                 <repository>
                     <id>ossrh</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
         </profile>
